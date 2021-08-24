@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #dbbfbe;
+    --secondary-color: #1f1630;
+    --secondary-dark: #0d0914;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', sans-serif;
+    box-sizing: border-box;
+}
+
+.content{
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    background-color: #333;
+}
+
+header img{
+    width: 5em;
+}
+
+.hero{
+    background-color: var(--primary-color);
+}
+
+.hero .content, .about .content, 
+.information .content, footer .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 3em;
+}
+
+.hero .content{
+    min-height: 100vh;
+    align-items: center;
+}
+
+.hero p{
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    color: #888;
+}
+
+.hero h1{
+    font-size: 3.5rem;
+    max-width: 12em;
+    color: #555;
+    margin-right: 0.3em;
+    line-height: 1.2;
+}
+
+.hero img{
+    max-width: 22em;
+    border-radius: 0.25em;
+    border: 4px solid #fff;
+}
+
+.about, .testimonials{
+    background-color: #1f1630;
+    color: #fff;
+}
+
+.about .right, .about .left{
+    width: 50%;
+}
+
+.about h2{
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.about .right{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    grid-auto-rows: 10em
+}
+
+.about img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.25em;
+    border: 4px solid #fff;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.about li{
+    margin-top: 2em;
+}
+
+.wordart-container{
+    display: flex;
+    justify-content: center;
+    width: 20em;
+}
+
+.wordart, .wordart-canvas{
+    width: 40em;
+    height: 25em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.information h2{
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    color: var(--secondary-color);
+}
+
+.information p{
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.information .image, .credited{
+    display: flex;
+    flex-direction: column;
+    max-width: 40em;
+    margin-bottom: 1em;
+}
+
+.information .image p, .credited p{
+    font-size: 0.8rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 0.8em;
+}
+
+.information a{
+    font-weight: bold;
+    color: #888;
+}
+
+.testimonials .content{
+    padding: 5em 3em;
+}
+
+.testimonials q{
+    font-style: italic;
+    font-size: 1.1rem;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.testimonials p{
+    margin: 1em 0 2.5em;
+}
+
+.information img,
+.contact img{
+    width: 100%;
+}
+
+.contact .content{
+    padding: 5em 3em;
+}
+
+.contact .content .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact h2{
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    color: var(--secondary-color);
+}
+
+.contact .image{
+    max-width: 35em;
+    margin: 0 1em 1em 0;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40em;
+    max-width: 100%;
+}
+
+.contact label{
+    display: block;
+}
+
+.contact input,
+.contact select,
+.contact textarea{
+    outline: none;
+    border: 1px solid #888;
+    padding: 0.7em;
+    margin: 0.4em 0 1.5em;
+    width: 100%;
+    transition: 300ms border ease-in-out;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus{
+    border-color: var(--secondary-color);
+}
+
+.contact textarea{
+    resize: vertical;
+    height: 15em;
+    max-height: 25em;
+}
+
+.contact input[type="submit"]{
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--secondary-color);
+    width: auto;
+    padding: 1.4em 3em;
+    margin: 0;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: 300ms background ease-in-out;
+}
+
+.contact input[type="submit"]:hover{
+    background-color: var(--secondary-dark);
+}
+
+footer{
+    color: #fff;
+    background-color: #333;
+}
+
+footer .content{
+    padding: 1.5em 3em;
+}
+
+footer p{
+    font-size: 0.8rem;
+}
+
+footer a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+footer a i{
+    color: #fff;
+}
+
+footer a i:hover{
+    color: var(--primary-color);
+}
+
+@media(max-width: 1024px){
+    .hero .content, .about .content, 
+    .information .content, .testimonials .content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3em 2em;
+    }
+
+    .hero p{
+        font-size: 2.2rem;
+    }
+
+    .hero h2{
+        font-size: 3rem;
+        margin: 0 0 0.5em;
+    }
+
+    .about .right, 
+    .about .left{
+        width: 100%;
+    }
+
+    .about .right{
+        margin-top: 3em;
+        grid-auto-rows: 12em;
+    }
+
+    .information .image{
+        max-width: 100%;
+        margin: 1em 0;
+    }
+
+    .contact .content{
+        text-align: center;
+        padding: 3em 2em;
+    }
+
+    .contact h2{
+        font-size: 2rem;
+    }
+
+    .contact .content .row{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-align: left;
+    }
+
+    .contact .image{
+        max-width: 100%;
+        margin: 0 0 3em;
+    }
+
+    .contact .image:first-of-type{
+        margin: 0 0 1em;
+    }
+
+    .contact input[type="submit"]{
+        width: 100%;
+        padding: 1.4em;
+    }
+}
+
+@media(max-width: 768px){
+    .hero p{
+        font-size: 1.8rem;
+    }
+
+    .hero h2{
+        font-size: 2.2rem;
+    }
+
+    .hero img{
+        max-width: 18em;
+    }
+
+    .about h2{
+        font-size: 2rem;
+    }
+
+    .about li{
+        font-size: 0.8rem;
+    }
+
+    .information h2{
+        font-size: 2rem;
+    }
+
+    .wordart-container{
+        width: 15em;
+    }
+    
+    .wordart, .wordart-canvas{
+        height: 20em;
+    }
+
+    .contact label{
+        font-size: 0.9rem;
+    }
+
+    .contact input, .contact textarea{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 425px){
+    header img{
+        width: 4em;
+    }
+
+    .hero .content, .about .content, 
+    .information .content, .contact .content,
+    .testimonials .content{
+        padding: 3em 1em;
+    }
+
+    .contact h2{
+        font-size: 1.5rem;
+    }
+
+    footer .content{
+        flex-direction: column;
+        padding: 1.5em 2em;
+    }
+
+    footer p{
+        margin-bottom: 1.5em;
+    }
+}
